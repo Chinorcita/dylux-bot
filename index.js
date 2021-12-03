@@ -446,7 +446,7 @@ switch (command) {
  
   case 'menu': 
  case 'help':
-    capt = `────  *DyLux  ┃ ᴮᴼᵀ*  ────
+    capt = `────  *Chino  ┃ ᴮᴼᵀ*  ────
     
 ${msg.hi} *${pushname}* ${ucapanWaktu}
     
@@ -455,40 +455,18 @@ ${msg.hi} *${pushname}* ${ucapanWaktu}
 ${readMore}
 ${menu(prefix)} 
 `
-    Fg.send3ButtonLoc(from, thumbfg, capt, `▢ *DyLux  ┃ ᴮᴼᵀ*\n▢ *Total Hits* : ${isTotalcmd}\n▢ *Usuarios* : ${User.length}\n▢ *Runtime* : ${kyun(process.uptime())}\n\n${msg.foll}`, '✆ Owner', `${prefix}owner`, '⏍ Info', `${prefix}info`, `⌬ ${msg.gp}s`, `${prefix}grupos`)
+    Fg.send3ButtonLoc(from, thumbfg, capt, `▢ *Chino  ┃ ᴮᴼᵀ*\n▢ *Total Hits* : ${isTotalcmd}\n▢ *Usuarios* : ${User.length}\n▢ *Runtime* : ${kyun(process.uptime())}\n\n${msg.foll}`, '✆ Owner', `${prefix}owner`, '⏍ Info', `${prefix}info`, `⌬ ${msg.gp}s`, `${prefix}grupos`)
     break
     
     case 'grupos': 
     case 'groups': 
-    case 'dylux': 
+    case 'Chino': 
     gps = `
-≡  *DyLux  ┃ ᴮᴼᵀ*  GRUPOS
+≡  *Chino  ┃ ᴮᴼᵀ*  GRUPOS
 
-▢ ${msg.gp} 1
-https://chat.whatsapp.com/G5sXrkhJ0pb0Tu8nhWLaFK
-
-▢ ${msg.gp} 2
-https://chat.whatsapp.com/CDUqNRu5Kh5KY5uqQI0BKE
-
-▢ ${msg.gp} 3
-https://chat.whatsapp.com/FSVDTytQxnTIPx8t8wBWeM
-
-▢ *YouTube*
-• https://www.youtube.com/fg98f
 `
 m.reply(gps)
 break 
-
-case 'donate':
-case 'donar':
- m.reply(`≡ *DONACION*
-puedes donar si quieres ayudar a mantener el bot activo
-
-▢ *PayPal*
-• *Link :* https://tinyurl.com/PayPal-fg
-
-_Al donar consigues_  *Premium* `) 
-break
  
   case 'ping':
     const timestamp = speed();
@@ -523,11 +501,10 @@ case 'lang':
 case 'creator':
 case 'creador': 
 case 'developer':
-number = '59172945992@s.whatsapp.net'
+number = '526693173770@s.whatsapp.net'
     capt = `▢ ${msg.num} : @${number.split('@')[0]}\n\n`
-    capt += '▢ Instagram : https://www.instagram.com/fg98._'
-    await Fg.fakeLink(from, capt, thumbfg, `${msg.click}`, 'https://www.instagram.com/fg98._', mek)
-   /* Fg.sendContact(from, '59172945992', 'owner', {
+    await Fg.fakeLink(from, capt, thumbfg, `${msg.click}`, '', mek)
+   /* Fg.sendContact(from, '526693173770', 'owner', {
 	 key: {
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(from ? 
@@ -568,13 +545,11 @@ number = '59172945992@s.whatsapp.net'
 ▢ Versi Wa : ${Fg.user.phone.wa_version}
 
 *≡ OWNER*
-▢ Instagram : https://www.instagram.com/fg98._
-▢ WhatsApp : wa.me/59172945992 
+▢ WhatsApp : wa.me/526693173770 
 
 *≡ SCRIPT*
 ▢ Git : ${package.homepage} 
 ` 
-Fg.send2Button(from, teks, '*_© FG98 DyLux_*', `ꨄ︎ Apoyar`, `${prefix}donate`, `⌬ ${msg.gp}s`, `${prefix}grupos`)
    break
    
     case 'nameninja':
@@ -623,7 +598,7 @@ prefg = await fetchJson(`https://api.simsimi.net/v2/?text=${value}&lc=${cekBahas
  m.reply(`≡ *PREGUNTAS*
  
 ▢ *Pregunta:* ${value}
-▢ *Respuesta :* ${prefg.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux')}`) 
+▢ *Respuesta :* ${prefg.success.replace('simsimi', 'Chino').replace('Simsimi', 'Chino').replace('sim simi', 'Chino')}`) 
 break 
 
 case 'afk':
@@ -1037,7 +1012,7 @@ break
 		            ytresult += '*⏳ Duración* : ' + video.timestamp + '\n'
 		            ytresult += '*📤 Publicado* : ' + video.ago + '\n________________________\n\n'
 		    		});
-		    		ytresult += '─── DyLux ┃ ᴮᴼᵀ ───'
+		    		ytresult += '─── Chino ┃ ᴮᴼᵀ ───'
 		    		 Fg.sendMessage(from, tbuff, image, {thumbnail:fakethumb , quoted: mek, caption: ytresult})
 		            break
    
@@ -1063,7 +1038,7 @@ break
    msg = resgl.map(({ title, link, snippet}) => {
     return `*${title}*\n${link}\n${snippet}`
   }).join`\n\n`
-   await Fg.adReply(from, msg, text, ' BÚSQUEDA DE GOOGLE : ' + value, tanggal, thumbfg, 'https://www.instagram.com/fg98._')
+   await Fg.adReply(from, msg, text, ' BÚSQUEDA DE GOOGLE : ' + value, tanggal, thumbfg)
    break
    
    case 'igvid':
@@ -1256,7 +1231,7 @@ break
   case 'join':
   case 'entrabot':
  //   if(!isOwner && !isBot) return
-   if(!isPremium && !isOwner && !isBot) return m.reply(msg.premium)
+   if(!isAdmins && !isOwner && !isBot) return m.reply(msg.premium)
     if(!value) return m.reply(`✳️Ingrese el link de tu Grupo`) 
     join = value.split('https://chat.whatsapp.com/')[1]
     await Fg.acceptInvite(join).then((res) => {
@@ -1323,7 +1298,7 @@ https://chat.whatsapp.com/${linkgp}`
     case 'addpremium':
     case 'addprem': 
     if(!isGroup) return m.reply(msg.group)
-    if(!isOwner && !isBot) return m.reply(msg.owner)
+    if(!isOwner && !isBot && !isAdmins) return m.reply(msg.owner)
     prem = cekPremium(dia)
     if (prem === true) {
       return m.reply(msg.isprem)
@@ -1927,7 +1902,7 @@ case 'riddle':  //acertijo
     case 'update':
     case 'actualizar':
 if (!isOwner && !isBot) return m.reply(msg.owner)
-gfg = `git remote set-url origin https://github.com/FG98F/dylux-bot.git && git pull `
+gfg = `git remote set-url origin https://github.com/FG98F/Chino-bot.git && git pull `
 exec(`${gfg}`, (err, stdout) => {
 if (err) return m.reply(err) 
 if (stdout) m.reply(`✅ ${msg.updatef} :\n\n${stdout}`)
@@ -2005,7 +1980,7 @@ case 'delwelcome':
    if(value.toLowerCase() === 'welcome') {
      capt = welc.replace('@user', tag).replace('@name', pushname).replace('@bio', about).replace('@date', tanggal).replace('@desc', groupDesc).replace('@group', groupName) 
  // Fg.sendMessage(from, welm, image, {contextInfo: {  mentionedJid: [sender]}, thumbnail: fakethumb, quoted: mek, caption: capt})
-Fg.send2ButtonLoc(from, welm, capt, 'Sígueme en Instagram\nhttps://www.instagram.com/fg98._', '⦙☰ MENU', '/menu', '⏍ INFO GP', '/infogp', false, {
+Fg.send2ButtonLoc(from, welm, capt, '⦙☰ MENU', '/menu', '⏍ INFO GP', '/infogp', false, {
 	      contextInfo: { 
             mentionedJid: Fg.parseMention(capt)
 	      } 
@@ -2013,11 +1988,7 @@ Fg.send2ButtonLoc(from, welm, capt, 'Sígueme en Instagram\nhttps://www.instagra
      } else if(value.toLowerCase() === 'bye') {
        capt = bye.replace('@user', tag).replace('@name', pushname).replace('@bio', about).replace('@date', tanggal).replace('@group', groupName)       
   //Fg.sendMessage(from, welm, image, {contextInfo: {  mentionedJid: [sender]}, thumbnail: fakethumb, quoted: mek, caption: capt})
-   Fg.sendButtonLoc(from, welm, capt, 'Sígueme en Instagram\nhttps://www.instagram.com/fg98._', '👋🏻', 'unde', false, {
-	      contextInfo: { 
-            mentionedJid: Fg.parseMention(capt)
-	      } 
-	    });//---
+  
      } else {
        m.reply('Lista de eventos\n\n- Welcome\n- Bye')
      }
@@ -2036,7 +2007,7 @@ case 'simi':
 case 'bot':
 		 if (args.length < 1) return m.reply(`${msg.hi} _*${pushname}*_ ${msg.simn} *${prefix + command}* ${msg.simmsg} ${prefix + command} ${msg.hi} bot`)
 		result = await fetchJson(`https://api.simsimi.net/v2/?text=${value}&lc=${cekBahasa(who)}`, {method: 'get'})
-        m.reply(result.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux'))
+        m.reply(result.success.replace('simsimi', 'Chino').replace('Simsimi', 'Chino').replace('sim simi', 'Chino'))
                      break
  case 'suit':
  case 'ppt':
@@ -2054,30 +2025,30 @@ case 'bot':
     //determinar las reglas
     if (value == ppt) {
       await addPoin(sender, 100)
-        m.reply(`▢ *${msg.emt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ DyLux : ${ppt}\n\n🎁  (±)100 Coins`)
+        m.reply(`▢ *${msg.emt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ Chino : ${ppt}\n\n🎁  (±)100 Coins`)
     } else if (value == `${msg.piedra}`) {
         if (ppt == `${msg.tijera}`) {
           await addPoin(sender, poin)
-            m.reply(`▢ *${msg.gst}* 🎊\n\n‣ ${msg.pptuser} : ${value}\n‣ DyLux : ${ppt}\n\n🎁  *+${poin} Coins*`)
+            m.reply(`▢ *${msg.gst}* 🎊\n\n‣ ${msg.pptuser} : ${value}\n‣ Chino : ${ppt}\n\n🎁  *+${poin} Coins*`)
         } else {
           await delPoin(sender, poin)
-            m.reply(`▢ *${msg.pdt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ DyLux : ${ppt}\n\n  *-${poin} Coins*`)
+            m.reply(`▢ *${msg.pdt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ Chino : ${ppt}\n\n  *-${poin} Coins*`)
         }
     } else if (value == `${msg.tijera}`) {
         if (ppt == `${msg.papel}`) {
           await addPoin(sender, poin)
-            m.reply(`▢ *${msg.gst}* 🎊\n\n‣ ${msg.pptuser} : ${value}\n‣ DyLux : ${ppt}\n\n🎁  *+${poin} Coins*`)
+            m.reply(`▢ *${msg.gst}* 🎊\n\n‣ ${msg.pptuser} : ${value}\n‣ Chino : ${ppt}\n\n🎁  *+${poin} Coins*`)
         } else {
           await delPoin(sender, poin)
-            m.reply(`▢ *${msg.pdt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ DyLux : ${ppt}\n\n  *-${poin} Coins*`)
+            m.reply(`▢ *${msg.pdt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ Chino : ${ppt}\n\n  *-${poin} Coins*`)
         }
     } else if (value == `${msg.papel}`) {
         if (ppt == `${msg.piedra}`) {
           await addPoin(sender, poin)
-            m.reply(`▢ *${msg.gst}* 🎊\n\n‣ ${msg.pptuser} : ${value}\n‣ DyLux : ${ppt}\n\n🎁  *+${poin} Coins*`)
+            m.reply(`▢ *${msg.gst}* 🎊\n\n‣ ${msg.pptuser} : ${value}\n‣ Chino : ${ppt}\n\n🎁  *+${poin} Coins*`)
         } else {
           await delPoin(sender, poin)
-            m.reply(`▢ *${msg.pdt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ DyLux : ${ppt}\n\n  *-${poin} Coins*`)
+            m.reply(`▢ *${msg.pdt}*\n\n‣ ${msg.pptuser} : ${value}\n‣ Chino : ${ppt}\n\n  *-${poin} Coins*`)
         }
     } else {
        m.reply(salah)
@@ -2224,7 +2195,7 @@ if(!isCmd && isChatbot === true){
  // if(!isPremium) return
   if(m.mtype == 'stickerMessage') return
   result = await fetchJson(`https://api.simsimi.net/v2/?text=${budy}&lc=${cekBahasa(who)}`, {method: 'get'})
-  m.reply(result.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('simi', 'DyLux').replace('Simi', 'DyLux'))
+  m.reply(result.success.replace('simsimi', 'Chino').replace('Simsimi', 'Chino').replace('simi', 'Chino').replace('Simi', 'Chino'))
 }
 
 // antiview once
